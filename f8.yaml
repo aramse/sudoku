@@ -1,0 +1,15 @@
+general:
+  name: sudoku
+components:
+  - type: stateless
+    name: sudoku
+    containers:
+      - dir: ./
+        readyCheck:
+          httpGet:
+            port: 80
+            path: /
+    expose:
+      - servicePort: 80
+        containerPort: 80
+tests: []
